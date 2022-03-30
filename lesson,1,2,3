@@ -1,1 +1,95 @@
 ## This is the pratice lesson 1,2,3
+> x <-1
+> print(x)
+[1] 1
+> [1]
+Error: unexpected '[' in "["
+> msg <-"hello"
+> msg
+[1] "hello"
+>  ## above is string
+> x <- 5
+> x
+[1] 5
+> print(x)
+[1] 5
+> x <- 1:20
+> x
+ [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14
+[15] 15 16 17 18 19 20
+> x <- 1:50
+> x
+ [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14
+[15] 15 16 17 18 19 20 21 22 23 24 25 26 27 28
+[29] 29 30 31 32 33 34 35 36 37 38 39 40 41 42
+[43] 43 44 45 46 47 48 49 50
+> ## Creating Vectors
+> ## The c() function be used to create vectors of objects.
+> x <- c(0.5,0.6) ## numeric
+> class(x)
+[1] "numeric"
+> x <- c(TRUE,FALSE) ## logical
+> class(x)
+[1] "logical"
+> > x <- c(T,F) ## logical
+Error: unexpected '>' in ">"
+>  x <- c(TRUE,FALSE) ## logical
+> class(x)
+[1] "logical"
+> x <- c("a","b","c") ## character
+> class(x)
+[1] "character"
+> x <- 9:29  ##integer
+> class(x)
+[1] "integer"
+> x <- c(1+0i, 2+4i) ## complex
+> class(x)
+[1] "complex"
+> ## Using the vectors() function
+> x <- vector("numeric",length = 10)
+> x
+ [1] 0 0 0 0 0 0 0 0 0 0
+> ## Mixing Objects 
+> ## what about the following?
+> y <- c(1.7, "a")  ## character
+> class(y)
+[1] "character"
+> y <-c(TRUE,2)
+> y
+[1] 1 2
+> class(y)
+[1] "numeric"
+> y <-c("a",TRUE)
+> class(y)
+[1] "character"
+> ## Explicit Corecion
+> ## objects can be explicitly corecred from one class to another using the 
+> x <- 0:6
+> class(x)
+[1] "integer"
+> 
+> as.numeric(x)
+[1] 0 1 2 3 4 5 6
+> as.numeric(x) ## one data type change another data type
+[1] 0 1 2 3 4 5 6
+> as.character(x)
+[1] "0" "1" "2" "3" "4" "5" "6"
+> as.logical(x)
+[1] FALSE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE
+> EXplicit Corecion
+Error: unexpected symbol in "EXplicit Corecion"
+> ##  EXplicit Corecion
+> ## Nonsensical corecion results in NAs.
+> x <- c("a","b","c")
+> 
+> as.numeric(x)
+[1] NA NA NA
+Warning message:
+NAs introduced by coercion 
+> 
+> as.logical(x)
+[1] NA NA NA
+> x <- 0:6
+> 
+> as.complex(x)
+[1] 0+0i 1+0i 2+0i 3+0i 4+0i 5+0i 6+0i
